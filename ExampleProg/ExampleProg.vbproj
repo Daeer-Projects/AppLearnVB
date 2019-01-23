@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A40C7FF-893C-43E9-82C4-3A891E5AC236}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ExampleProg.My.MyApplication</StartupObject>
+    <RootNamespace>ExampleProg</RootNamespace>
+    <AssemblyName>ExampleProg</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ExampleProg.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ExampleProg.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.38\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Tvp">
+      <HintPath>..\packages\Dapper.Tvp.1.0.0\lib\net45\Dapper.Tvp.dll</HintPath>
+    </Reference>
+    <Reference Include="DapperWrapper">
+      <HintPath>..\packages\DapperWrapper.0.3.0.0\lib\net40\DapperWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Regextra">
+      <HintPath>..\packages\Regextra.0.3.0.0\lib\net40\Regextra.dll</HintPath>
+    </Reference>
+    <Reference Include="Regextra.PassphraseRegex">
+      <HintPath>..\packages\Regextra.0.3.0.0\lib\net40\Regextra.PassphraseRegex.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DemonstrationStep.vb" />
+    <Compile Include="InputClasses\Training\DemonstrationTraining.vb" />
+    <Compile Include="InputClasses\Training\ExplanationTraining.vb" />
+    <Compile Include="InputClasses\Training\ImmitationTraining.vb" />
+    <Compile Include="InputClasses\Training\PracticeTraining.vb" />
+    <Compile Include="InputClasses\Training\SelectTrainingInput.vb" />
+    <Compile Include="Interfaces\INewQuestionInput.vb" />
+    <Compile Include="InputClasses\NewQuestionTypes\AnswerTypeInput.vb" />
+    <Compile Include="InputClasses\NewQuestionTypes\DemonstrationTypeInput.vb" />
+    <Compile Include="InputClasses\NewQuestionTypes\ExplanationTypeInput.vb" />
+    <Compile Include="InputClasses\NewQuestionTypes\QuestionTypeInput.vb" />
+    <Compile Include="Interfaces\ISelectTrainingInput.vb" />
+    <Compile Include="ProcedureReturnTypes\GetExplanationDetailsType.vb" />
+    <Compile Include="ProcedureReturnTypes\ImmitationStageListType.vb" />
+    <Compile Include="ProcedureReturnTypes\QuestionDetailsReturnType.vb" />
+    <Compile Include="Views\App4Learn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\App4Learn.Designer.vb">
+      <DependentUpon>App4Learn.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Constants\CommonConstants.vb" />
+    <Compile Include="Constants\DatabaseConstants.vb" />
+    <Compile Include="DatabaseClasses\DatabaseConnectorWrapper.vb" />
+    <Compile Include="InputClasses\LogInInput.vb" />
+    <Compile Include="InputClasses\NewQuestionInput.vb" />
+    <Compile Include="InputClasses\NewQuestionTypes\CurriculumTypeInput.vb" />
+    <Compile Include="InputClasses\NewQuestionTypes\KeyStageTypeInput.vb" />
+    <Compile Include="InputClasses\NewQuestionTypes\SubjectTypeInput.vb" />
+    <Compile Include="Interfaces\IDbConnector.vb" />
+    <Compile Include="Helpers\Helpers.vb" />
+    <Compile Include="InputClasses\NewUserInput.vb" />
+    <Compile Include="Interfaces\IUserClass.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ProcedureReturnTypes\CurriculumListType.vb" />
+    <Compile Include="ProcedureReturnTypes\ExplanationListType.vb" />
+    <Compile Include="ProcedureReturnTypes\KeyStageListType.vb" />
+    <Compile Include="QuestionTypes\DemonstrationStepType.vb" />
+    <Compile Include="QuestionTypes\QuestionInsertType.vb" />
+    <Compile Include="ProcedureReturnTypes\SubjectListType.vb" />
+    <Compile Include="Classes\UserClass.vb" />
+    <Compile Include="Views\NewQuestionView.Designer.vb">
+      <DependentUpon>NewQuestionView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewQuestionView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SelectTrainingView.Designer.vb">
+      <DependentUpon>SelectTrainingView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectTrainingView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Revision.Designer.vb">
+      <DependentUpon>Revision.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Revision.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\App4Learn.resx">
+      <DependentUpon>App4Learn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewQuestionView.resx">
+      <DependentUpon>NewQuestionView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SelectTrainingView.resx">
+      <DependentUpon>SelectTrainingView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Revision.resx">
+      <DependentUpon>Revision.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\ExampleProg.InputClasses.NewQuestionTypes.QuestionTypeInput.datasource" />
+    <None Include="My Project\DataSources\UserClass.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
